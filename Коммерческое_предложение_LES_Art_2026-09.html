@@ -679,6 +679,32 @@
     .portfolio-link strong { display: block; margin-top: 4px; font-size: 15px; }
     .portfolio-link__arrow { color: var(--leaf); font-size: 25px; transition: transform .2s ease; }
     .portfolio-link:hover .portfolio-link__arrow { transform: translate(4px, -2px); }
+    .footer__side { display: grid; min-width: 0; gap: 13px; }
+    .footer__requisites {
+      padding: 16px 18px;
+      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.18);
+    }
+    .footer__requisites-title {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--leaf);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+    .footer__requisites dl { display: grid; gap: 6px; margin: 0; }
+    .footer__requisites dl > div {
+      display: grid;
+      grid-template-columns: 62px minmax(0, 1fr);
+      gap: 12px;
+      align-items: baseline;
+    }
+    .footer__requisites dt,
+    .footer__requisites dd { margin: 0; font-size: 11px; line-height: 1.35; }
+    .footer__requisites dt { color: rgba(255,255,255,.53); }
+    .footer__requisites dd { color: rgba(255,255,255,.9); font-weight: 700; }
     .footer__bottom {
       display: flex;
       justify-content: space-between;
@@ -1060,7 +1086,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" id="proposal-footer">
     <div class="shell">
       <div class="footer__grid">
         <div>
@@ -1068,10 +1094,20 @@
           <h2>Александр Кузнецов</h2>
           <p>Интерьерный фотограф из Москвы. Снимаю отели, номера, SPA, общественные и коммерческие пространства. В кадре собираю планировку, свет, материалы и характер места.</p>
         </div>
-        <a class="portfolio-link" href="https://prointeriors.ru/" target="_blank" rel="noopener noreferrer">
-          <span><small>Портфолио и подробности об авторе</small><strong>prointeriors.ru</strong></span>
-          <span class="portfolio-link__arrow" aria-hidden="true">↗</span>
-        </a>
+        <div class="footer__side">
+          <a class="portfolio-link" href="https://prointeriors.ru/" target="_blank" rel="noopener noreferrer">
+            <span><small>Портфолио и подробности об авторе</small><strong>prointeriors.ru</strong></span>
+            <span class="portfolio-link__arrow" aria-hidden="true">↗</span>
+          </a>
+          <section class="footer__requisites" aria-label="Реквизиты исполнителя">
+            <span class="footer__requisites-title">Реквизиты исполнителя</span>
+            <dl>
+              <div><dt>Исполнитель</dt><dd>Кузнецов Александр Александрович</dd></div>
+              <div><dt>ИНН</dt><dd>183115598361</dd></div>
+              <div><dt>НДС</dt><dd>без НДС</dd></div>
+            </dl>
+          </section>
+        </div>
       </div>
       <div class="footer__bottom">
         <span>Коммерческое предложение для LES Art Resort</span>
